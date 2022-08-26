@@ -1,32 +1,46 @@
 # Express-API
 
-I den här laborationen ska du individuellt skapa ett enklare REST-API i NodeJS med
-express och typescript. Då API:et skall har funktionalitet för CRUD skall det finnas 4 st
-endpoints inkluderat GET, DELETE, PUT och POST för en resurs. Varje endpoint skall
-utföra vad dess anropsmetod ämnar att utföra, dvs. POST för att lägga till, PUT för att
-uppdatera, GET för att hämta osv. GET anropet skall hämta alla objekt. Vad API:et
-hanterar för typ av resurs väljer du själva, det viktiga är att det finns minst 4 st egenskaper
-för ett objekt varav en egenskap är id. Projektet skall inte ha någon databas utan istället ha
-all data sparad lokalt i serverfilen (exempelvis en array med produkter). För att testa ert
-API rekommenderas du att använda VS Code tilläget REST Client.
+Jag har skapat ett REST-API för en simpel meny till en resturang. Varje objekt består av ett id, namn och pris.
 
-För att bli godkänd på den här uppgiften MÅSTE du använda GIT och GitHub.
-Inlämningen sker som vanligt via läroplattformen där du ska zippa ihop din projektmapp.
-I din projektmapp ska det finnas (utöver all kod) en README.md fil. Den ska innehålla en
-titel, beskrivning av projektet, vilka krav som är uppfyllda, info om hur projektet byggs
-och körs. Kom ihåg att ta bort node_modules!!!
+## Bygga och starta projektet
 
-## Krav för godkänt ##
+`npm install`\
+`npm run build`\
+`npm run start`
 
-- [ ] Projektet innehåller minst 4 st. endpoints (GET, POST, PUT & DELETE för en resurs)
-- [ ] Samtliga endpoints skall kunna nås via en REST Client fil (.rest|.http)
-- [ ] Datan som API:et hanterar sparas lokalt i serverfilen
-- [ ] APIét ska svara med 404 om datan saknas.
-- [X] Git & GitHub har använts
-- [X] Projektmappen innehåller en README.md fil - (läs ovan för mer info)
-- [ ] Uppgiften lämnas in i tid!
+## Endpoints
 
-## Krav för väl godkänt ##
+### GET
+
+För att visa all mat i menyn kör man en GET http://localhost:3000/menu som visar menyn i json format
+
+### PUT
+
+För att uppdatera ett objekt i menyn kör man en PUT http://localhost:3000/menu/id där id är id:t på maten du vill ändra med json i body
+
+`{ "title": "Steak", "price": 129, }`
+
+### POST
+
+För att skapa en ny maträtt kör man en POST http://localhost:3000/menu med json i body
+
+`{ "title": "Steak", "price": 129, }`
+
+### DELETE
+
+För att ta bort en maträtt kör man en DELETE http://localhost:3000/menu/id där id är maträtten man vill ta bort
+
+## Krav för godkänt
+
+- [x] Projektet innehåller minst 4 st. endpoints (GET, POST, PUT & DELETE för en resurs)
+- [x] Samtliga endpoints skall kunna nås via en REST Client fil (.rest|.http)
+- [x] Datan som API:et hanterar sparas lokalt i serverfilen
+- [x] APIét ska svara med 404 om datan saknas.
+- [x] Git & GitHub har använts
+- [x] Projektmappen innehåller en README.md fil - (läs ovan för mer info)
+- [x] Uppgiften lämnas in i tid!
+
+## Krav för väl godkänt
 
 - [ ] Alla punkter för godkänt är uppfyllda
 - [ ] All data skall vara sparad i en JSON-fil istället för i serverfilen
