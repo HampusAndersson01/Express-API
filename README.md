@@ -10,23 +10,23 @@ Börja med att köra `npm install` i terminalen för att installera alla depende
 
 ### GET
 
-För att visa all mat i menyn kör man en GET http://localhost:3000/menu som visar menyn i json format
+För att visa all mat i menyn kör man en GET http://localhost:4444/menu som visar menyn i json format
 
 ### PUT
 
-För att uppdatera ett objekt i menyn kör man en PUT http://localhost:3000/menu/id där id är id:t på maten du vill ändra med json i body
+För att uppdatera ett objekt i menyn kör man en PUT http://localhost:4444/menu/id där id är id:t på maten du vill ändra med json i body
 
 `{ "title": "Steak", "price": 129, }`
 
 ### POST
 
-För att skapa en ny maträtt kör man en POST http://localhost:3000/menu med json i body
+För att skapa en ny maträtt kör man en POST http://localhost:4444/menu med json i body
 
 `{ "title": "Steak", "price": 129, }`
 
 ### DELETE
 
-För att ta bort en maträtt kör man en DELETE http://localhost:3000/menu/id där id är maträtten man vill ta bort
+För att ta bort en maträtt kör man en DELETE http://localhost:4444/menu/id där id är maträtten man vill ta bort
 
 ## Krav för godkänt
 
