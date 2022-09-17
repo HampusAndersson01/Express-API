@@ -23,4 +23,4 @@ app.use("/menu", menuRouter);
 /**
  * Server Activation
  */
-app.listen(port, () => console.log("Running on: http://localhost:${port}"));
+app.listen(port, () => console.log('Running on: http://localhost:'+port));
