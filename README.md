@@ -4,9 +4,7 @@ Jag har skapat ett REST-API för en simpel meny till en resturang. Varje objekt 
 
 ## Bygga och starta projektet
 
-`npm install`\
-`npm run build`\
-`npm run start`
+Börja med att köra `npm install` i terminalen för att installera alla dependencies. sedan kan du starta projektet med `npm run dev`.
 
 ## Endpoints
 

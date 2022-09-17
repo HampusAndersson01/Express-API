@@ -4,7 +4,7 @@
   "description": "I den här laborationen ska du individuellt skapa ett enklare REST-API i NodeJS med\r express och typescript. Då API:et skall har funktionalitet för CRUD skall det finnas 4 st\r endpoints inkluderat GET, DELETE, PUT och POST för en resurs. Varje endpoint skall\r utföra vad dess anropsmetod ämnar att utföra, dvs. POST för att lägga till, PUT för att\r uppdatera, GET för att hämta osv. GET anropet skall hämta alla objekt. Vad API:et\r hanterar för typ av resurs väljer du själva, det viktiga är att det finns minst 4 st egenskaper\r för ett objekt varav en egenskap är id. Projektet skall inte ha någon databas utan istället ha\r all data sparad lokalt i serverfilen (exempelvis en array med produkter). För att testa ert\r API rekommenderas du att använda VS Code tilläget REST Client.",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node dist/index.js",
+    "dev": "nodemon src/index.ts",
     "build": "tsc"
   },
   "repository": {
@@ -22,8 +22,9 @@
     "@types/node": "^18.7.9",
     "express": "^4.18.1",
     "express-async-errors": "^3.1.1",
-    "nodemon": "^2.0.19",
+    "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "vite": "^3.1.2"
   }
 }

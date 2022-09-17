@@ -11,6 +11,7 @@ import menuRouter from "./menu.router";
  */
 
 const app = express();
+const port = 4444;
 
 /**
  *  App Configuration
@@ -22,4 +23,4 @@ app.use("/menu", menuRouter);
 /**
  * Server Activation
  */
-app.listen(3000, () => console.log("Running on: http://localhost:3000"));
+app.listen(port, () => console.log("Running on: http://localhost:${port}"));
